@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faraz Taslimi — Frontend Developer</title>
+  <meta name="description" content="Faraz Taslimi — frontend developer. Hand-coded websites in HTML, CSS and vanilla JavaScript. Based in Iran, working remotely worldwide.">
+  <meta name="theme-color" content="#060a12">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Faraz Taslimi — Frontend Developer">
+  <meta property="og:description" content="Hand-coded websites in HTML, CSS & vanilla JavaScript. Based in Iran, working remotely worldwide.">
+  <meta property="og:url" content="https://faraztaslimi.github.io/">
+  <meta property="og:image" content="https://faraztaslimi.github.io/og.jpg">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<div id="clouds" aria-hidden="true"></div>
+<canvas id="rain" aria-hidden="true"></canvas>
+<div id="flash" aria-hidden="true"></div>
+<div id="glow" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <a class="brand" href="#top" aria-label="Faraz Taslimi — back to top">
+    <svg class="badge badge--sm" viewBox="0 0 64 64" aria-hidden="true">
+      <defs>
+        <linearGradient id="lh-tile" x1="0.2" y1="0" x2="0.54" y2="1"><stop offset="0" stop-color="#191b28"/><stop offset="1" stop-color="#0a0b10"/></linearGradient>
+        <linearGradient id="lh-ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e879f9"/><stop offset=".5" stop-color="#a855f7"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient>
+        <linearGradient id="lh-sheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".14"/><stop offset=".45" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+        <radialGradient id="lh-glow"><stop offset="0" stop-color="#7dd3fc" stop-opacity=".55"/><stop offset="1" stop-color="#7dd3fc" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="64" height="64" rx="17.6" fill="url(#lh-tile)"/>
+      <rect x="0.91" y="0.91" width="62.18" height="62.18" rx="16.69" fill="none" stroke="url(#lh-ring)" stroke-width="1.82"/>
+      <rect width="64" height="64" rx="17.6" fill="url(#lh-sheen)"/>
+      <g fill="#f4f5f8">
+        <rect x="13.3" y="18.8" width="35.4" height="5.4" rx="2.7"/>
+        <rect x="13.3" y="18.8" width="5.4" height="27.4" rx="2.7"/>
+        <rect x="13.3" y="29.3" width="14.9" height="5.4" rx="2.7"/>
+        <rect x="35.3" y="18.8" width="5.4" height="27.4" rx="2.7"/>
+      </g>
+      <circle cx="50" cy="13.5" r="4.6" fill="url(#lh-glow)"/>
+      <circle cx="50" cy="13.5" r="5" fill="#7dd3fc" opacity=".22"/>
+      <circle cx="50" cy="13.5" r="2.4" fill="#7dd3fc"/>
+    </svg>
+    <span>Faraz Taslimi</span>
+  </a>
+
+  <nav class="site-nav" aria-label="Main">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="head-actions">
+    <button id="rainToggle" class="rain-toggle" type="button" aria-pressed="true" title="Toggle the storm — rain, clouds & lightning">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 15.5A3.2 3.2 0 0 1 6.2 9.2A4.3 4.3 0 0 1 14.6 8.1A3.4 3.4 0 0 1 17 14.5Z"/><path d="m12.8 11.5-2.2 3.4h2.8l-2.2 3.7"/></svg>
+      <span>Storm</span>
+    </button>
+    <a class="btn btn--ghost btn--sm" href="mailto:Faraz.Taslimi@gmail.com?subject=Project%20inquiry">Hire me</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <p class="chip chip--status reveal"><span class="pulse" aria-hidden="true"></span> Open to work — freelance &amp; junior roles</p>
+
+      <div class="hero__id reveal">
+        <svg class="badge badge--lg" viewBox="0 0 64 64" role="img" aria-label="FT monogram — Faraz Taslimi's logo">
+          <defs>
+            <linearGradient id="lh2-tile" x1="0.2" y1="0" x2="0.54" y2="1"><stop offset="0" stop-color="#191b28"/><stop offset="1" stop-color="#0a0b10"/></linearGradient>
+            <linearGradient id="lh2-ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e879f9"/><stop offset=".5" stop-color="#a855f7"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient>
+            <linearGradient id="lh2-sheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".14"/><stop offset=".45" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+            <radialGradient id="lh2-glow"><stop offset="0" stop-color="#7dd3fc" stop-opacity=".55"/><stop offset="1" stop-color="#7dd3fc" stop-opacity="0"/></radialGradient>
+          </defs>
+          <rect width="64" height="64" rx="17.6" fill="url(#lh2-tile)"/>
+          <rect x="0.91" y="0.91" width="62.18" height="62.18" rx="16.69" fill="none" stroke="url(#lh2-ring)" stroke-width="1.82"/>
+          <rect width="64" height="64" rx="17.6" fill="url(#lh2-sheen)"/>
+          <g fill="#f4f5f8">
+            <rect x="13.3" y="18.8" width="35.4" height="5.4" rx="2.7"/>
+            <rect x="13.3" y="18.8" width="5.4" height="27.4" rx="2.7"/>
+            <rect x="13.3" y="29.3" width="14.9" height="5.4" rx="2.7"/>
+            <rect x="35.3" y="18.8" width="5.4" height="27.4" rx="2.7"/>
+          </g>
+          <circle cx="50" cy="13.5" r="4.6" fill="url(#lh2-glow)"/>
+          <circle cx="50" cy="13.5" r="5" fill="#7dd3fc" opacity=".22"/>
+          <circle cx="50" cy="13.5" r="2.4" fill="#7dd3fc"/>
+        </svg>
+        <div>
+          <h1 class="hero__name">Faraz <span class="grad">Taslimi</span></h1>
+          <p class="hero__role">Frontend Developer — HTML · CSS · JavaScript</p>
+        </div>
+      </div>
+
+      <p class="hero__text reveal">I hand-build fast, accessible websites that actually live in the browser —
+      like <strong>Natorous</strong>, a full expedition-booking site running on vanilla JavaScript.
+      No frameworks yet, no page builders — just the web platform, learned from the inside out.</p>
+
+      <p class="hero__meta reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.2 6 10.2a6 6 0 1 1-12 0C6 9.2 12 3 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        Based in Iran — working remotely worldwide · English + Persian
+      </p>
+
+      <div class="hero__cta reveal">
+        <a class="btn btn--primary" href="#work">View my work
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="mailto:Faraz.Taslimi@gmail.com?subject=Project%20inquiry">Email me</a>
+      </div>
+
+      <dl class="hero__stats reveal">
+        <div><dt>01</dt><dd>live site</dd></div>
+        <div><dt>04</dt><dd>CodePen builds</dd></div>
+        <div><dt>100%</dt><dd>hand-coded</dd></div>
+        <div><dt>0</dt><dd>frameworks ( yet )</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ TICKER ============ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>FIGMA → CODE</span><span>COMPLETE WEBSITES</span><span>IDEAS ALIVE IN THE BROWSER</span><span>PIXEL-TRUE DETAILS</span><span>VANILLA FIRST</span><span>RAIN OR SHINE</span>
+      <span>FIGMA → CODE</span><span>COMPLETE WEBSITES</span><span>IDEAS ALIVE IN THE BROWSER</span><span>PIXEL-TRUE DETAILS</span><span>VANILLA FIRST</span><span>RAIN OR SHINE</span>
+    </div>
+  </div>
+
+  <!-- ============ WORK ============ -->
+  <section class="work section" id="work">
+    <div class="wrap">
+      <p class="eyebrow reveal">01 — Selected work</p>
+      <h2 class="h2 reveal">Things I've <span class="grad">built</span></h2>
+
+      <div class="tabs reveal" role="tablist" aria-label="Work sections">
+        <button class="tab" id="tab-projects" type="button" role="tab" aria-selected="true" aria-controls="panel-projects">
+          Projects <span class="tab__count">02</span>
+        </button>
+        <button class="tab" id="tab-pens" type="button" role="tab" aria-selected="false" aria-controls="panel-pens" tabindex="-1">
+          CodePens <span class="tab__count">04</span>
+        </button>
+      </div>
+
+      <!-- --- Projects panel --- -->
+      <div class="panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0">
+
+        <article class="feature reveal">
+          <a class="feature__media" href="https://natorous.netlify.app" target="_blank" rel="noopener">
+            <img src="assets/natorous-hero.jpg" alt="Natorous hero — 'The world is still wild. Go find it.' headline over the expedition landing page" width="1600" height="800" loading="lazy">
+            <span class="feature__badge">LIVE</span>
+          </a>
+          <div class="feature__body">
+            <p class="feature__tag">Expedition travel — full site</p>
+            <h3 class="feature__title">NATOROUS</h3>
+            <p class="feature__desc">A dark, cinematic landing page for an expedition-travel company. Every tour, destination
+            and review renders from one config file — 7-1 Sass architecture, BEM naming, bundled with Vite.
+            Zero libraries, zero frameworks: just HTML, CSS and JavaScript doing all the work.</p>
+            <ul class="chips" aria-label="Technologies used">
+              <li>HTML5</li><li>Sass · 7-1 + BEM</li><li>Vanilla JS</li><li>Vite</li><li>data-driven</li>
+            </ul>
+            <div class="feature__cta">
+              <a class="btn btn--primary" href="https://natorous.netlify.app" target="_blank" rel="noopener">Visit live site
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a class="btn btn--ghost" href="https://github.com/FarazTaslimi/Natorous" target="_blank" rel="noopener">Source code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature feature--wip reveal">
+          <div class="feature__media">
+            <img src="assets/now-music-concept.jpg" alt="Now Music concept — the 'Neon Nights' player interface with a track playing, lyrics panel and up-next queue" width="1200" height="800" loading="lazy">
+            <span class="feature__badge feature__badge--wip">IN DEVELOPMENT</span>
+          </div>
+          <div class="feature__body">
+            <p class="feature__tag">Music player — concept → build</p>
+            <h3 class="feature__title">NOW MUSIC</h3>
+            <p class="feature__desc">My own music player, built in the open — design locked, engine under construction.
+            The key idea: <strong>the whole music source is Telegram</strong> — playlists and audio files live in
+            Telegram chats, and the player streams them right in the browser. Your Telegram library becomes
+            the backend.</p>
+            <ul class="chips" aria-label="Technologies used">
+              <li>Vanilla JS</li><li>Telegram-powered</li><li>concept designed</li>
+            </ul>
+            <div class="feature__cta">
+              <a class="btn btn--ghost" href="https://codepen.io/faraztaslimi/pen/01a1b6dd-6a5d-75c3-9e54-afb9ab510b72" target="_blank" rel="noopener">Try the player prototype
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+            <p class="feature__status"><span class="pulse pulse--teal" aria-hidden="true"></span>Now building: the audio engine — it launches when it's actually good</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- --- CodePens panel --- -->
+      <div class="panel" id="panel-pens" role="tabpanel" aria-labelledby="tab-pens" tabindex="0" hidden>
+
+        <div class="pens">
+
+          <article class="pen reveal">
+            <p class="pen__num">PEN — 01</p>
+            <h3 class="pen__title">Natorous — Data-Driven Tour Cards (Vanilla JS)</h3>
+            <p class="pen__desc">Tour cards driven entirely by data — the card engine behind my travel site, as a standalone pen.</p>
+            <ul class="chips" aria-label="Technologies used"><li>Vanilla JS</li><li>Data-driven</li><li>UI</li></ul>
+            <a class="pen__link" href="https://codepen.io/faraztaslimi/pen/01a1b5f5-64ca-7cee-8af0-07969789ff36" target="_blank" rel="noopener">Open on CodePen
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="pen reveal">
+            <p class="pen__num">PEN — 02</p>
+            <h3 class="pen__title">FT Elements — Custom HTML Tags, Real Components</h3>
+            <p class="pen__desc">Real UI components registered as custom HTML tags — write the tag, get the component.</p>
+            <ul class="chips" aria-label="Technologies used"><li>Custom elements</li><li>Web Components</li><li>UI library</li></ul>
+            <a class="pen__link" href="https://codepen.io/faraztaslimi/pen/01a1b730-9d96-7e9f-8656-d3499b6f2c48" target="_blank" rel="noopener">Open on CodePen
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="pen reveal">
+            <p class="pen__num">PEN — 03</p>
+            <h3 class="pen__title">Now Playing — NCS Music Cards + Custom Player</h3>
+            <p class="pen__desc">Music cards with a custom-built player — playlist data in, working controls out.</p>
+            <ul class="chips" aria-label="Technologies used"><li>JavaScript</li><li>Audio</li><li>Player UI</li></ul>
+            <a class="pen__link" href="https://codepen.io/faraztaslimi/pen/01a1b6dd-6a5d-75c3-9e54-afb9ab510b72" target="_blank" rel="noopener">Open on CodePen
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="pen reveal">
+            <p class="pen__num">PEN — 04</p>
+            <h3 class="pen__title">FT Monogram — Pure CSS Brand Badge</h3>
+            <p class="pen__desc">My personal brand badge drawn in pure CSS — no images, no SVG, just the cascade.</p>
+            <ul class="chips" aria-label="Technologies used"><li>Pure CSS</li><li>Branding</li></ul>
+            <a class="pen__link" href="https://codepen.io/faraztaslimi/pen/01a1b5bd-396b-73ae-acec-b86dc0a54310" target="_blank" rel="noopener">Open on CodePen
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <a class="pen pen--more reveal" href="https://codepen.io/faraztaslimi" target="_blank" rel="noopener">
+            More experiments on CodePen
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills section" id="skills">
+    <div class="wrap">
+      <p class="eyebrow reveal">02 — What I work with</p>
+      <h2 class="h2 reveal">The core, <span class="grad">properly</span></h2>
+
+      <div class="skills__grid">
+        <article class="skill reveal">
+          <p class="skill__num">01</p>
+          <h3>HTML</h3>
+          <p>Semantic, accessible markup — proper landmarks, real forms with validation, SEO-ready meta. Every tag earns its place.</p>
+          <ul class="chips"><li>Semantic HTML5</li><li>Forms &amp; validation</li><li>SEO &amp; meta</li></ul>
+        </article>
+        <article class="skill reveal">
+          <p class="skill__num">02</p>
+          <h3>CSS</h3>
+          <p>Modern layout and motion without frameworks — Grid, Flexbox, custom properties, and animation that respects reduced-motion.</p>
+          <ul class="chips"><li>Grid &amp; Flexbox</li><li>Custom properties</li><li>Responsive</li></ul>
+        </article>
+        <article class="skill reveal">
+          <p class="skill__num">03</p>
+          <h3>JavaScript</h3>
+          <p>Vanilla ES6+ straight to the DOM — data-driven rendering, canvas animation, accessible tabbed widgets. The storm on this page — rain, clouds, lightning — is JavaScript.</p>
+          <ul class="chips"><li>DOM &amp; events</li><li>Canvas</li><li>Data-driven UI</li></ul>
+        </article>
+      </div>
+      <p class="skills__note reveal">No frameworks yet — everything on this page is written by hand, and that's exactly the point.</p>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about section" id="about">
+    <div class="wrap">
+      <p class="eyebrow reveal">03 — About</p>
+      <h2 class="h2 reveal">Self-taught, <span class="grad">vision-first</span></h2>
+
+      <div class="about__cols">
+        <div class="about__text reveal">
+          <p>I'm Faraz — a self-taught frontend developer from Iran. For the past year and a half I've been
+          learning on my own: no bootcamp, no shortcuts — just HTML, CSS and JavaScript, one honest concept at a time.</p>
+          <p>I care about vision before code. I start from how a page should feel, design it, then rebuild it by hand —
+          which is why my work doesn't look like templates. Vanilla-first is a personal rule: if I can't explain what
+          every line does, it doesn't ship.</p>
+          <p>I'm looking for my first real project — a full website, a rebuild, a collaboration — where a fresh pair of
+          eyes with high standards can out-work a shelf of frameworks.</p>
+        </div>
+        <ul class="about__facts reveal">
+          <li><span>Based in</span><strong>Iran · remote worldwide</strong></li>
+          <li><span>Languages</span><strong>Persian · English</strong></li>
+          <li><span>Learning</span><strong>1.5 yrs self-directed</strong></li>
+          <li><span>Studying</span><strong>Vocational CS — networking &amp; software</strong></li>
+          <li class="is-accent"><span>Status</span><strong>Open to opportunities</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact section" id="contact">
+    <div class="wrap">
+      <p class="eyebrow reveal">04 — Contact</p>
+      <h2 class="h2 reveal">Let's make something <span class="grad">alive</span></h2>
+      <p class="contact__sub reveal">Have a Figma file, a rough idea, or a website that needs a sharp pair of eyes?
+      My inbox is open — first project or not, I treat it like it ships tomorrow.</p>
+
+      <div class="contact__cta reveal">
+        <a class="btn btn--primary btn--lg" href="mailto:Faraz.Taslimi@gmail.com?subject=Project%20inquiry">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Faraz.Taslimi@gmail.com
+        </a>
+        <a class="btn btn--ghost btn--lg" href="Faraz_Taslimi_CV.pdf" download>Download CV
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <ul class="socials reveal" aria-label="Social profiles">
+        <li><a href="https://github.com/FarazTaslimi" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/faraztaslimi/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></li>
+        <li><a href="https://www.behance.net/faraztaslimi" target="_blank" rel="noopener" aria-label="Behance" title="Behance">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.969 16.927a2.561 2.561 0 0 0 1.901.742 2.501 2.501 0 0 0 1.531-.457c.362-.235.636-.584.78-.994h2.189a4.503 4.503 0 0 1-1.66 2.476 4.684 4.684 0 0 1-2.89.893 5.014 5.014 0 0 1-1.901-.348 3.876 3.876 0 0 1-1.423-.996 4.51 4.51 0 0 1-.896-1.548 5.843 5.843 0 0 1-.311-1.973c-.005-.657.1-1.31.311-1.933a4.28 4.28 0 0 1 .906-1.551 4.115 4.115 0 0 1 1.425-.996 4.883 4.883 0 0 1 1.886-.353 4.617 4.617 0 0 1 1.955.397 3.902 3.902 0 0 1 1.386 1.087c.372.459.644.99.807 1.561.171.63.232 1.282.181 1.931h-6.428a2.737 2.737 0 0 0 .646 2.096zM7.04 7.988h5.594v1.383H7.04V7.988zm10.541 2.19a2.19 2.19 0 0 0-1.828-.793 2.32 2.32 0 0 0-.99.181 1.964 1.964 0 0 0-.664.461 1.8 1.8 0 0 0-.377.626c-.077.222-.122.454-.132.688h4.31a2.092 2.092 0 0 0-.607-1.175l.288.012zM7.28 16.807c.29.014.578-.033.848-.139a1.797 1.797 0 0 0 .62-.427 1.784 1.784 0 0 0 .375-.613c.087-.258.129-.528.124-.8a1.77 1.77 0 0 0-.521-1.42 1.865 1.865 0 0 0-.63-.379 2.288 2.288 0 0 0-.781-.128H4.708v3.906H7.28zm.338-5.999a1.934 1.934 0 0 0 1.161-.353c.315-.254.483-.65.451-1.056a1.223 1.223 0 0 0-.129-.601 1.034 1.034 0 0 0-.36-.396 1.607 1.607 0 0 0-.528-.211 3.262 3.262 0 0 0-.643-.062H4.708v2.68h2.91v-.001zm2.318-4.995c.562.083 1.104.282 1.588.584.485.303.87.742 1.112 1.26.246.56.37 1.166.362 1.778a3.253 3.253 0 0 1-.463 1.796 3.658 3.658 0 0 1-1.458 1.244c.847.24 1.491.68 1.931 1.32.44.64.66 1.45.66 2.428a4.35 4.35 0 0 1-.424 1.996 3.636 3.636 0 0 1-1.155 1.354 4.881 4.881 0 0 1-1.683.753 8.578 8.578 0 0 1-1.963.218H0V5.151h7.607c.776-.001 1.549.061 2.313.186l.016.176zm9.928-1.13h5.396V6.08h-5.396V4.683z"/></svg></a></li>
+        <li><a href="https://www.figma.com/@faraztaslimi" target="_blank" rel="noopener" aria-label="Figma" title="Figma">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor">
+            <path d="M8.5 1H12v7H8.5a3.5 3.5 0 0 1 0-7z"/>
+            <path d="M12 1h3.5a3.5 3.5 0 0 1 0 7H12V1z"/>
+            <path d="M8.5 8.5H12v7H8.5a3.5 3.5 0 0 1 0-7z"/>
+            <circle cx="15.5" cy="12" r="3.5"/>
+            <path d="M8.5 16H12v3.5A3.5 3.5 0 1 1 8.5 16z"/>
+          </g></svg></a></li>
+        <li><a href="https://codepen.io/faraztaslimi" target="_blank" rel="noopener" aria-label="CodePen" title="CodePen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+            <path d="M12 2.5 21.5 8.7v6.6L12 21.5 2.5 15.3V8.7L12 2.5z"/>
+            <path d="M12 2.5v6.2M12 15.3v6.2M2.5 8.7l9.5 6.2 9.5-6.2M2.5 15.3l9.5-6.2 9.5 6.2"/>
+          </g></svg></a></li>
+        <li><a href="https://instagram.com/faraz_taslimi" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
+            <circle cx="12" cy="12" r="4.5"/>
+          </g><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg></a></li>
+        <li><a href="https://t.me/faraz_taslimi" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.945 3.458l-3.4 16.052c-.257 1.134-.928 1.416-1.881.881l-5.196-3.83-2.507 2.411c-.278.278-.512.512-1.049.512l.374-5.289 9.617-8.684c.419-.373-.093-.58-.646-.207L5.34 12.934l-5.11-1.598c-1.111-.347-1.13-1.111.231-1.644l19.973-7.695c.925-.347 1.733.207 1.435 1.36z"/></svg></a></li>
+        <li><a href="mailto:Faraz.Taslimi@gmail.com" aria-label="Email" title="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
+            <path d="m3 6 9 7 9-7" stroke-linecap="round" stroke-linejoin="round"/>
+          </g></svg></a></li>
+      </ul>
+      <p class="contact__note reveal">Usually replies within a day — rain or shine.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap site-foot__row">
+    <p>© <span id="year">2026</span> Faraz Taslimi</p>
+    <p>HAND-CODED · <span class="grad">STORM INCLUDED</span></p>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+</body>
+</html>
